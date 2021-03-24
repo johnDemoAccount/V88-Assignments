@@ -1,0 +1,7 @@
+.container{
+    width: 970px;
+    margin: auto;
+}
+.accordion, .tab{
+    margin: 10px;
+}

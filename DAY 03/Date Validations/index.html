@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/jquery-ui.css">
+        <script src="assets/jquery.min.js"></script>
+        <script src="assets/jquery-ui.js"></script>
+        <script src="assets/style.js"></script>
+        <style>
+            label, input{
+                display: block;
+                margin: 5px;
+            }
+            label span{
+                color: red;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $(function(){
+                    $('#from_date').datepicker();
+                });
+                $(function(){
+                    $('#to_date').datepicker();
+                });
+                $('#submit').on('click', function(){
+                    var from_date = $('#from_date').val();
+                    var to_date = $('#to_date').val();
+                    var name = $('#first_name').val() +" "+ $('#last_name').val();
+
+                    $('#appointment_id').unbind();
+                    $('#appointment_id').submit(function(e){
+                        e.preventDefault();
+                        console.log("Thanks " + name +"! Your Cruise leaves on " + from_date + " and returns on " + to_date + "!");
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="appointment_id">
+                <label for="from_date">From: <span>*</span></label>
+                <input type="text" id="from_date">
+                <span>From Date is required.</span>
+                <label for="to_date">To: <span>*</span></label>
+                <input type="text" id="to_date">
+                <span>To Date is required.</span>
+                <label for="first_name">First Name <span>*</span></label>
+                <input type="text" id="first_name">
+                <span>First Name is required.</span>
+                <label for="last_name">Last Name <span>*</span></label>
+                <input type="text" id="last_name">
+                <span>Last Name is required.</span>
+                <input type="submit" id="submit" value="Check Dates!">
+            </form>
+        </div>
+    </body>
+</html>

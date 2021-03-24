@@ -1,0 +1,17 @@
+.click		- DONE
+.hide		- DONE
+.show		- DONE
+.toggle		- DONE
+.slideDown	- DONE
+.slideUp	- DONE
+.slideToggle	- DONE
+.fadeIn		- DONE
+.fadeOut	- DONE
+.addClass	- DONE
+.before		- DONE
+.after		- DONE
+.append		- DONE
+.html		- DONE
+.attr		- DONE
+.val		- DONE
+.text		- DONE

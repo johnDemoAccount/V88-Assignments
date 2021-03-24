@@ -1,0 +1,28 @@
+.container{
+    width: 970px;
+    margin: auto;
+    text-align: center;
+}
+section{
+    margin: 20px;
+    padding: 10px;
+    border: 1px dashed black
+}
+input{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+img{
+    margin: auto;
+    display: block;
+    padding: 10px;
+    height: 300px;
+}
+.red{
+    background: red;
+}
